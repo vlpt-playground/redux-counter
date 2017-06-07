@@ -6,16 +6,27 @@
 
 import * as types from './ActionTypes';
 
-export const increment = () => ({
-    type: types.INCREMENT
+export const create = (color) => ({
+    type: types.CREATE,
+    color
 });
 
-export const decrement = () => ({
-    type: types.DECREMENT
+export const remove = () => ({
+    type: types.REMOVE
 });
 
-// 다른 액션 생성자들과 달리, 파라미터를 갖고있습니다
-export const setColor = (color) => ({
+export const increment = (index) => ({
+    type: types.INCREMENT,
+    index
+});
+
+export const decrement = (index) => ({
+    type: types.DECREMENT,
+    index
+});
+
+export const setColor = ({index, color}) => ({
     type: types.SET_COLOR,
+    index,
     color
 });
