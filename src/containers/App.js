@@ -25,7 +25,7 @@ class App extends Component {
 // 액션함수 준비
 const mapToDispatch = (dispatch) => ({
     onCreate: () => dispatch(actions.create(getRandomColor())),
-    onRemove: (index) => dispatch(actions.remove(index))
+    onRemove: () => dispatch(actions.remove())
 });
 
 // 리덕스에 연결을 시키고 내보낸다
